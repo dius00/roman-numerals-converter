@@ -1,6 +1,7 @@
 const RomanConverter = {
   fromRoman: (roman) => {
     if(typeof roman !== "string") throw new TypeError("not a string");
+    if(roman.length < 1) throw new Error('an empty string is not a valid input');
     roman = roman.toUpperCase();
     if(roman.search(/[^MDCLXVID]/g) != -1) throw new Error('invalid string');
     if(roman.search(/I[^VXI]|IX\w|IV\w|V[^I]|I{4,}|XL[^IV]|M{4,}|L{2,}|L[^XIV]|XC[^IV]|C[^LXVI]|C{4,}/g) != -1) throw new Error ('Trying something funky? If you believe this should not throw error please open an issue on github https://github.com/dius00/roman-numerals-converter');
