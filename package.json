@@ -1,6 +1,6 @@
 {
   "name": "roman-num-converter",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "utility to convert from and to roman numbers",
   "main": "index.js",
   "private": false,
@@ -12,7 +12,7 @@
     "postpublish": "pinst --enable",
     "preversion": "npm test",
     "postversion": "git push origin --tags --no-verify",
-    "test": "mocha"  
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
